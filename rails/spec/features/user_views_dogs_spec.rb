@@ -9,13 +9,13 @@ feature "user views all of the dogs" do
   # [] I should not see dogs that don't need to be currently watched
 
   before (:each) do
-    dog = FactoryGirl.create(:dog)
+    @dog = FactoryGirl.create(:dog)
   end
 
  it "sees a list of all the dogs that currently need to be watched" do
    visit "/dogs"
 
-   expect(page).to have_content(dog.name)
+   expect(page).to have_content(@dog.name)
 
  end
 end

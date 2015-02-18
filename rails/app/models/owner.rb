@@ -1,4 +1,4 @@
-class Owner < ActiveRecrd::Base
+class Owner < ActiveRecord::Base
   has_many :dogs
 
 end
