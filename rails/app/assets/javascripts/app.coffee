@@ -1,4 +1,8 @@
-dog = angular.module('dog',[])
+dog = angular.module('dog',[
+  'templates',
+  'ngRoute',
+  'controllers',
+  ])
 app.config([ '$routeProvider',
   ($routeProvider)->
     $routeProvider
@@ -10,4 +14,9 @@ app.config([ '$routeProvider',
         templateUrl: "<%= asset_path('new.html') %>"
         controller: 'DogsController'
       )
+])
+
+controllers = angular.module('controllers',[])
+controllers.controller("DogsController", [ '$scope',
+  ($scope)->
 ])
