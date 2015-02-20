@@ -1,6 +1,11 @@
-<div ng-app="dog">
+<div ng-app="dogs">
   <div class="view-container">
     <div ng-view class="view-frame animate-view">
-    </dv>
+    <ul>
+      <% @dogs.each do |dog| %>
+        <%= link_to dog.name, @dog%>  
+      <% end %>
+    </ul>
+    </div>
   </div>
 </div>

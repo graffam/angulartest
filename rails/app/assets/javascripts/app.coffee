@@ -1,17 +1,19 @@
-dog = angular.module('dog',[
+# This is app/assets/javascripts/app.coffee.erb
+
+#= depend_on_asset index.html
+#= depend_on_asset new.html
+
+dogs = angular.module('dogs',[
   'templates',
   'ngRoute',
   'controllers',
-  ])
-app.config([ '$routeProvider',
+])
+
+dogs.config([ '$routeProvider',
   ($routeProvider)->
     $routeProvider
       .when('/',
-        templateUrl: "<%= asset_path('index.html') %>"
-        controller: 'DogsController'
-      )
-      .when('/dogs/new',
-        templateUrl: "<%= asset_path('new.html') %>"
+        templateUrl: "index.html"
         controller: 'DogsController'
       )
 ])
