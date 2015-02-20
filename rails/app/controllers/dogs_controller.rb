@@ -1,6 +1,6 @@
 class DogsController < ApplicationController
 
   def index
-    @dogs = Dog.all
+    @dogs = Dog.where(bording: true)
   end
 end

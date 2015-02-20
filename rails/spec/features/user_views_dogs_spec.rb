@@ -6,7 +6,7 @@ feature "user views all of the dogs" do
   # So I may contact an owner to watch their dog.
   # Acceptance Criteria:
   # [X] I must see a list of all the dogs that need to be watched
-  # [] I should not see dogs that don't need to be currently watched
+  # [X] I should not see dogs that don't need to be currently watched
 
   before (:each) do
     @dog = FactoryGirl.create(:dog)
